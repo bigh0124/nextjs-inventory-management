@@ -1,13 +1,23 @@
 "use client";
+
+import { useAppDispatch, useAppSelector } from "@/app/redux";
+import { setIsSidebarCollapsed } from "@/state";
 import { Bell, Menu, Settings, Sun } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
+  const isSidebarCollapsed = useAppSelector((state) => state.global.isSidebarCollapsed);
+  const dispatch = useAppDispatch();
+
+  const toggleSidebar = () => {
+    dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
+  };
+
   return (
     <div className="flex justify-between items-center w-full mb-7 gap-3">
       {/* LEFT SIDE */}
       <div className="flex justify-between items-center gap-5">
-        <button className="p-3 rounded-full bg-gray-100 hover:bg-blue-100">
+        <button className="p-3 rounded-full bg-gray-100 hover:bg-blue-100" onClick={toggleSidebar}>
           <Menu className="w-4 h-4" />
         </button>
         <div className="relative">
