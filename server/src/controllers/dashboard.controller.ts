@@ -39,9 +39,9 @@ export const getDashboardMetrics = async (req: Request, res: Response): Promise<
         date: "desc",
       },
     });
-    const expenseByCategory = expenseByCategoryRaw.map((item) => ({ ...item, amount: item.amount.toString() }));
+    const expenseByCategorySummary = expenseByCategoryRaw.map((item) => ({ ...item, amount: item.amount.toString() }));
 
-    res.status(200).json({ expenseByCategory, expenseSummary, purchaseSummary, popularProducts, salesSummary });
+    res.status(200).json({ expenseByCategorySummary, expenseSummary, purchaseSummary, popularProducts, salesSummary });
   } catch (err) {
     res.status(500).json({ message: "Error retrieving dasdboard metrics" });
   }
