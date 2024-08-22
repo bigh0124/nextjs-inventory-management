@@ -6,8 +6,6 @@ import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxi
 const CardSalesSummary = () => {
   const { data, isLoading, isError } = useGetDashboardMetricsQuery();
   const salesData = data?.salesSummary || [];
-  console.log("data", data);
-  console.log("s", data?.salesSummary);
   const [timeframe, setTimeframe] = useState("weekly");
 
   const totalValueSum = salesData.reduce((acc, curr) => acc + curr.totalValue, 0) || 0;
