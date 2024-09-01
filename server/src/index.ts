@@ -8,6 +8,7 @@ import bodyParser from "body-parser";
 import dashboardRoute from "./routes/dashboard.route";
 import productRoute from "./routes/product.route";
 import userRoute from "./routes/user.route";
+import expenseRoute from "./routes/expense.route";
 // CONFIGURATIONS
 dotenv.config();
 const app = express();
@@ -23,6 +24,7 @@ app.use(morgan("common"));
 app.use("/dashboard", dashboardRoute);
 app.use("/products", productRoute);
 app.use("/users", userRoute);
+app.use("/expenses", expenseRoute);
 
 // SERVER
 const port = process.env.PORT || 3001;
