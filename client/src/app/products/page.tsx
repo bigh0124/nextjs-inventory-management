@@ -20,7 +20,6 @@ const Products = () => {
 
   const { data: products, isError, isLoading } = useGetProductsQuery(searchTerm);
   const [createProduct] = useCreateProductMutation();
-
   const handleCreateProduct = async (productData: ProductFormData) => {
     await createProduct(productData);
   };
@@ -63,13 +62,11 @@ const Products = () => {
                 <div className="flex flex-col items-center">
                   img
                   <h3 className="text-lg text-gray-900 font-semibold">{product.name}</h3>
-                  <p className="text-gray-800">{product.price}</p>
+                  <p className="text-gray-800">${product.price}</p>
                   <div className="text-sm text-gray-600 mt-1">Stock: {product.stockQuantity}</div>
-                  {product.rating && (
-                    <div className="flex items-center mt-2">
-                      <Rating rating={product.rating} />
-                    </div>
-                  )}
+                  <div className="flex items-center mt-2">
+                    <Rating rating={product.rating} />
+                  </div>
                 </div>
               </div>
             );
