@@ -27,7 +27,7 @@ app.use("/users", userRoute);
 app.use("/expenses", expenseRoute);
 
 // SERVER
-const port = process.env.PORT || 3001;
-app.listen(port, () => {
+const port = Number(process.env.PORT) || 3001;
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`);
 });
