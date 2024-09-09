@@ -23,7 +23,9 @@ HI~我叫陳嘉泓<BR>
 感謝您花時間來看過我的履歷，期待貴公司能給予我機會，我會努力以出色的工作表現來回報您的賞識！<BR>
 <hr>
 
-<a href="https://main.d2znlb4vr25kav.amplifyapp.com/dashboard" target="blank"><B>Inventory Management</B> (hosting on AWS)</a> <BR>
+### <a href="https://main.d2znlb4vr25kav.amplifyapp.com/dashboard" target="_blank"><B>Inventory Management</B> (hosting on AWS)</a> <BR>
+
+<a href="https://main.d2znlb4vr25kav.amplifyapp.com/dashboard" target="_blank"><B><img src="https://raw.githubusercontent.com/bigh0124/nextjs-inventory-management/main/im.png" /></a> <BR>
 
 Available Services
 ---
